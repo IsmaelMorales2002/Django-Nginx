@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 # CAMBIAR EN PRODUCCION!
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://flowers-today-production.up.railway.app'
+    'https://django-nginx-production.up.railway.app'
 ]
 
 # Application definition
