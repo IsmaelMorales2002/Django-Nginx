@@ -16,7 +16,7 @@ def subir_imagen_usuario(path, url):
     try:
         with open(path, 'rb') as file:
             files = {'file': file}
-            response = requests.post(url, files=files, timeout=5)
+            response = requests.post(url, files=files, timeout=5,verify=False) #verify=False
             response.raise_for_status()
             print('Imagen de usuario subida correctamente al servidor')
     except requests.exceptions.RequestException as e:
@@ -49,7 +49,7 @@ def subir_imagen_producto(path, url):
     try:
         with open(path, 'rb') as file:
             files = {'file': file}
-            response = requests.post(url, files=files, timeout=5)
+            response = requests.post(url, files=files, timeout=5,verify=False) #verify=False
             response.raise_for_status()
             print('Imagen de producto subida correctamente al servidor')
     except requests.exceptions.RequestException as e:
